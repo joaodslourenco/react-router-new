@@ -1,11 +1,17 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function ProductDetail(props) {
   const params = useParams();
 
   return (
     <>
-      <h1>{params.productId}</h1>
+      <h1>Product Detail</h1>
+      <p>{params.productId}</p>
+      <p>
+        <Link to=".." relative="path">
+          Back
+        </Link>
+      </p>
     </>
   );
 }
